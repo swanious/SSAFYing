@@ -1,0 +1,81 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Roboto&display=swap');
+
+
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color7);
+}
+
+.login-area {
+  padding: 40px 50px;
+  width: 500px;
+  height: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  box-shadow: 15px, 15px, 15px black;
+  font-family: "Noto Sans", "Roboto", sans-serif;
+}
+
+.login-area .in-head {
+  height: 70px;
+  margin-bottom: 40px;
+}
+
+.partition-list {
+  display: flex;
+  margin-top: 1rem !important;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.field-set .label {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+}
+
+.login__btn {
+  margin-top: 2rem;
+  background-color: var(--color1) !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  height: 4rem;
+  border-radius: 10px;
+  word-spacing: 10px
+}
+
+.v-input__control {
+  margin-bottom: 50px;
+}
+
+.field-set .login__btn {
+  margin-bottom: 50px;
+}
+
+.find-set {
+  text-align: center;
+}
+
+/* @media screen and (min-width: 960px) {
+} */
+
+@media screen and (max-width: 980px) {
+  .login-area {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  div.v-input__control {
+    display: block;
+  }
+}

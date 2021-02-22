@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafying_chat.model.mapper.ChatRoomMapper">
+  <insert id="chatRoomInsert" parameterType="ChatRoomDto">
+    insert into ChatRoom(
+      chatRoomId,
+      type,
+      name,
+      content,
+      isLock,
+      hostId
+    )
+    values(
+      #{chatRoomId},
+      #{type},
+      #{name},
+      #{content},
+      #{isLock},
+      #{hostId}
+    );
+  </insert>
+
+  <select id="chatRoomSelectAll" resultType="ChatRoomDto">
+    select
+      chatRoomId,
+      createdAt,
+      type,
+      name,
+      content,
+      isLock
+    from
+      ChatRoom
+  </select>
+
+  <select id="chatRoomSelectOne" parameterType="String" resultType="ChatRoomDto">
+    select
+      chatRoomId,
+      createdAt,
+      type,
+      name,
+      content,
+      isLock,
+      hostId
+    from
+      ChatRoom
+    where
+      chatRoomId = #{chatRoomId}
+    ;
+  </select>
+
+  <select id="chatRoomSelectByKeyWord" parameterType="map" resultType="ChatRoomDto">
+    select
+      chatRoomId,
+      createdAt,
+      type,
+      name,
+      content,
+      isLock
+    from
+      ChatRoom
+    where
+      ${key} = #{word}
+    ;
+  </select>
+
+  <delete id="chatRoomDelete" parameterType="String">
+    delete from ChatRoom
+    where
+      chatRoomId = #{chatRoomId}
+    ;
+  </delete>
+</mapper>

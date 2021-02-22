@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafying.model.mapper.UserMapper">
+  <insert id="userInsert" parameterType="UserDto">
+    insert into User(
+      userId,
+      email,
+      password,
+      nickname,
+      username,
+      birthday,
+      grade,
+      profileImage,
+      gender
+    )
+    values(
+      replace(uuid(),'-',''),
+      #{email},
+      #{password},
+      #{nickname},
+      #{username},
+      #{birthday},
+      #{grade},
+      #{profileImage},
+      #{gender}
+    );
+  </insert>
+
+  <select id="userSelectAll" resultType="UserDto">
+    select
+      userId,
+      email,
+      password,
+      nickname,
+      username,
+      birthday,
+      grade,
+      profileImage,
+      createdAt,
+      gender,
+      report,
+      isActive,
+      role
+    from 
+      User
+    ;
+  </select>
+
+  <select id="userSelectOne" parameterType="String" resultType="UserDto">
+    select
+      userId,
+      email,
+      password,
+      nickname,
+      username,
+      birthday,
+      grade,
+      profileImage,
+      createdAt,
+      gender,
+      report,
+      isActive,
+      role
+    from 
+      User
+    where
+      userId = #{userId}
+    ;
+  </select>
+
+  <select id="userSelectByKeyWord" parameterType="map" resultType="UserDto">
+    select
+      userId,
+      email,
+      password,
+      nickname,
+      username,
+      birthday,
+      grade,
+      profileImage,
+      createdAt,
+      gender,
+      report,
+      isActive,
+      role
+    from 
+      User
+    where
+      ${key} = #{word}
+    ;
+  </select>
+
+  <update id="userUpdate" parameterType="UserDto">
+    update User
+    set
+      <if test="email">email = #{email},</if>
+      <if test="password">password = #{password},</if>
+      <if test="nickname">nickname = #{nickname},</if>
+      <if test="username">username = #{username},</if>
+      <if test="birthday">birthday = #{birthday},</if>
+      <if test="grade">grade = #{grade},</if>
+      <if test="profileImage">profileImage = #{profileImage},</if>
+      <if test="gender">gender = #{gender},</if>
+      <if test="report">report = #{report},</if>
+      <if test="isActive">isActive = #{isActive},</if>
+      <if test="role">role = #{role},</if>
+      userId = #{userId}
+    where
+      userId = #{userId}
+    ;
+  </update>
+
+  <delete id="userDelete" parameterType="String">
+    delete from User
+    where
+      userId = #{userId}
+    ;
+  </delete>
+
+  <select id="userLogin" parameterType="map" resultType="UserDto">
+    select
+      userId,
+      email,
+      password,
+      nickname,
+      username,
+      birthday,
+      grade,
+      profileImage,
+      createdAt,
+      gender,
+      report,
+      isActive,
+      role
+    from 
+      User
+    where
+      email = #{email} and
+      password = #{password}
+    ;
+  </select>
+</mapper>

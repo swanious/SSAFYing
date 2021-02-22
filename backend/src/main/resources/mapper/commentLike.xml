@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafying.model.mapper.CommentLikeMapper">
+      <select id="commentLikeSelectAll" resultType="CommentLikeDto">
+            select
+                  *
+            from
+                  CommentLike
+            ;
+      </select>
+      <insert id="commentLikeInsert" parameterType="CommentLikeDto">
+            insert into
+                  CommentLike(
+                        userId,
+                        commentId
+                  )
+            values
+                  (
+                        #{userId},
+                        #{commentId}
+                  )
+            ;
+      </insert>
+      <select id="commentLikeSelectByCommentId" resultType="CommentLikeDto">
+            select
+                  *
+            from
+                  CommentLike
+            where
+                  commentId = #{commentId}
+            ;
+      </select>
+      <delete id="commentLikeDelete">
+            delete from
+                  CommentLike
+            where
+                  commentId = #{commentId}
+            and
+                  userId = #{userId}
+            ;
+      </delete>
+      <select id="commentLikeOnAndOff">
+            select
+                  count(*)
+            from
+                  commentLike
+            where
+                  commentId = #{commentId}
+            and
+                  userId = #{userId}
+            ;
+      </select>
+</mapper>

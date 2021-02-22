@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafying_chat.model.mapper.EnrollMapper">
+  <insert id="enrollInsert" parameterType="EnrollDto">
+    insert into Enroll(
+      chatRoomId,
+      userId,
+      isHost
+    )
+    values(
+      #{chatRoomId},
+      #{userId},
+      #{isHost}
+    );
+  </insert>
+
+  <select id="enrollSelectLogin" parameterType="EnrollDto" resultType="EnrollDto">
+    select
+      enrollId,
+      createdAt,
+      chatRoomId,
+      userId,
+      isHost
+    from
+      Enroll
+    where
+      chatRoomId = #{chatRoomId} and
+      userId = #{userId}
+    ;
+  </select>
+
+  <select id="enrollSelectByKeyWord" parameterType="map" resultType="EnrollDto">
+    select
+      enrollId,
+      createdAt,
+      chatRoomId,
+      userId,
+      isHost
+    from
+      Enroll
+    where
+      ${key} = #{word}
+    ;
+  </select>
+
+  <delete id="enrollDelete" parameterType="map">
+    delete from Enroll
+    where
+      chatRoomId = #{chatRoomId} and
+      userId = #{userId}
+    ;
+  </delete>
+</mapper>

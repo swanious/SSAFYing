@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafying_chat.model.mapper.InviteAlertMapper">
+  <insert id="inviteAlertInsert" parameterType="InviteAlertDto">
+    insert into InviteAlert(
+      hostId,
+      nickname,
+      chatRoomId,
+      name,
+      userId
+    )
+    values(
+      #{hostId},
+      #{nickname},
+      #{chatRoomId},
+      #{name},
+      #{userId}
+    );
+  </insert>
+
+  <select id="inviteAlertSelectOne" parameterType="String" resultType="InviteAlertDto">
+    select
+      inviteAlertId,
+      createdAt,
+      isRead,
+      hostId,
+      nickname,
+      chatRoomId,
+      name
+    from
+      InviteAlert
+    where
+      userId = #{userId}
+    ;
+  </select>
+
+  <update id="inviteAlertUpdate" parameterType="int">
+    update InviteAlert
+    set
+      isRead = 1
+    where
+      inviteAlertId = #{inviteAlertId}
+    limit
+      1
+    ;
+  </update>
+
+  <delete id="inviteAlertDelete" parameterType="int">
+    delete from InviteAlert
+    where
+      inviteAlertId = #{inviteAlertId}
+    limit
+      1
+    ;
+  </delete>
+</mapper>

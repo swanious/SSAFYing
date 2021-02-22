@@ -1,0 +1,59 @@
+/* section 1 */
+
+.profile__wrap {
+  padding-top:5%;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+/* 프로필 헤더 */
+.profile__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 프로필 컨텐츠 */
+.contents--padding {
+  padding: 0 !important;
+}
+
+.profile__contents {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile__contents .contents1 {
+  width: 70%;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contents1 > li > a > button {
+  font-size: 1rem !important;
+  font-weight: bold;
+}
+
+
+.profile__contents .contents2 {
+  width: 30%;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* section 2 */
+.profile__section2 {
+  margin-bottom: 2px;
+  box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+}
+
+/* section 3 */
+.profile__section3 {
+  height: 100vh;
+  background-color: #f0f2f5;
+}

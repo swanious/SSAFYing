@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafying.model.mapper.ArticleLikeMapper">
+      <insert id="articleLikeInsert" parameterType="ArticleLikeDto">
+            insert into ArticleLike(
+                  userId,
+                  articleId
+            )
+            values(
+                  #{userId},
+                  #{articleId}
+            );
+      </insert>
+      <select id="articleLikeSelectAll" resultType="ArticleLikeDto">
+            select
+                  *
+            from
+                  ArticleLike
+            ;
+      </select>
+      <delete id="articleLikeDelete">
+            DELETE FROM
+                  `ArticleLike`
+            WHERE
+            `articleId` = #{articleId}
+            and
+            `userId` = #{userId};
+      </delete>
+      <select id="articleLikeSelectByArticleId" resultType="ArticleLikeDto">
+            select
+                  *
+            from
+                  ArticleLike
+            where
+                  articleId = #{articleId}
+            ;
+      </select>
+      <select id="articleLikeOnAndOff" resultType="int">
+            select
+                  count(*)
+            from
+                  ArticleLike
+            where
+                  articleId = #{articleId}
+            and
+                  userId = #{userId}
+            ;
+      </select>
+      <select id="articleLikeSelectLimit" resultType="articleLikeDto">
+            select
+                  *
+            from
+                  ArticleLike
+            limit
+                  ${limit}
+            ;
+      </select>
+</mapper>

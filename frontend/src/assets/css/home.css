@@ -1,0 +1,99 @@
+
+.v-main__wrap {
+  background-color: var(--color3);
+}
+
+.v-sheet {
+  background-color: var(--color3) !important;
+}
+
+
+/* 사이드바 */
+.main__sidebar {
+  width:30%; 
+  display:block; 
+  padding:0 5px; 
+  float:right;
+}
+
+.sidebar__image {
+  display: none;
+}
+
+.main__sidebar .card {
+  margin-bottom: 4px;
+}
+
+.main__sidebar .board {
+  width: 100%;
+  padding: 16px;
+}
+
+.board__header {
+  font-size:16px; 
+  font-weight:bold;
+}
+
+.link {
+  margin-bottom: 4px;
+}
+
+.link .link__button {
+  background: var(--color1);
+  width: 100%;
+}
+
+/* 메인 컨텐츠 */
+.home__image {
+  border: 0;
+}
+
+.main__contents{
+  display:inline-block; 
+  width:70%; 
+  padding:0 5px; 
+}
+
+/* 카드헤더 색 */
+.card-header {
+  color: var(--color7);
+  background-color: hsl(232, 37%, 88%);
+  font: bold;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .main__sidebar {
+    padding: 0;
+    width: 100%;
+  }
+
+  .like-message {
+    display: none;
+  }
+
+  .home__image {
+    display: none;
+  } 
+  .sidebar__image {
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .link {
+    display: none;
+  }
+
+  .link button {
+    display: none;
+  }
+
+  .main__contents {
+    width: 100%;
+  }
+}
+
+.article__list__title {
+  font-size:14px;
+}

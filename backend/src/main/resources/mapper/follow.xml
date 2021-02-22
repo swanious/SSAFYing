@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafying.model.mapper.FollowMapper">
+      <insert id="followInsert" parameterType="FollowDto">
+            insert into Follow(
+                  followerId,
+                  followingId
+            )
+            values(
+                  #{followerId},
+                  #{followingId}
+            );            
+      </insert>
+
+      <delete id="followDelete" parameterType="FollowDto">
+            delete from Follow
+            where
+                  followerId = #{followerId} and
+                  followingId = #{followingId}
+            ;
+      </delete>
+
+      <select id="followSelectOne" parameterType="FollowDto" resultType="FollowDto">
+            select
+                  followId,
+                  followerId,
+                  followingId
+            from
+                  Follow
+            where
+                  followerId = #{followerId} and
+                  followingId = #{followingId}
+            ;
+      </select>
+
+      <select id="followSelectByKeyWord" parameterType="map" resultType="FollowDto">
+            select
+                  followId,
+                  followerId,
+                  followingId
+            from
+                  Follow
+            where
+                  ${key} = #{word}
+            ;
+      </select>
+
+      <select id="followSelectAll" resultType="FollowDto">
+            select
+                  followId,
+                  followerId,
+                  followingId
+            from
+                  Follow;
+      </select>
+</mapper>

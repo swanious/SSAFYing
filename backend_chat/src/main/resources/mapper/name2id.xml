@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafying_chat.model.mapper.Name2idMapper">
+
+  <select id="userIdSelectByNickname" parameterType="String" resultType="String">
+    select
+      userId
+    from 
+      User
+    where
+      nickname = #{nickname}
+    limit
+      1
+    ;
+  </select>
+
+  <select id="roomIdSelectByName" parameterType="String" resultType="String">
+    select
+      chatRoomId
+    from 
+      ChatRoom
+    where
+      name = #{name}
+    limit
+      1
+    ;
+  </select>
+
+</mapper>

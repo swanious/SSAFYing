@@ -1,0 +1,161 @@
+
+.v-main__wrap {
+  background-color: var(--color3);
+}
+
+.v-sheet {
+  background-color: var(--color3) !important;
+}
+
+#community__container {
+  padding-top: 3rem;
+}
+
+/* 보드 */
+.community__header {
+  margin: 0 0 4rem 5px;
+  color: #2e2e2e;
+}
+
+.community__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.community__links .btn__group {
+  display: flex;
+  height: 40px;
+  padding: 0 5px;
+  margin-bottom: 5px;
+  border-radius: 1px;
+}
+
+.community__links .btn__group a {
+  font-size: 12px;
+  margin: 0 1px;
+}
+
+.community__links .btn__group #active {
+  background: var(--color1);
+}
+
+.community__links .btn__group #active span {
+  color: #ffffff;
+}
+
+.community__write {
+  text-align: right;
+}
+
+.btn.btn__write {
+  background: var(--color7);
+  color: #ffffff !important;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.community__contents{
+  width:70%; 
+  float: left;
+  padding:0 5px;
+  font-size: 14px;
+}
+
+.community__contents .status {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.create__btn1 {
+  background: var(--color7) !important; 
+  position:fixed; 
+  z-index: 10;
+  border:none !important;  
+  right:3rem; 
+  top:6rem;
+}
+.create__btn2 {
+  display: none !important;
+}
+
+
+/* 페이지네이션 디자인 커스터마이징 */
+.community__contents #pagination {
+  margin-bottom: 3rem;
+}
+
+.community__contents .pagination .disabled .page-link  {
+  color: var(--color2) !important;
+}
+
+.community__contents .pagination .active .page-link {
+  background-color: var(--color1);
+  color: #ffffff;
+  border: none;
+}
+
+
+.community__contents .pagination .page-item:not(.active) .page-link {
+  color: var(--color1);
+}
+
+
+
+/* 사이드바 */
+.community__sidebar {
+  width:30%; 
+  padding:0 5px; 
+  float:right;
+}
+
+.community__sidebar .board {
+  width: 100%;
+}
+
+.community__sidebar .sidebar__image {
+  display: none;
+}
+
+.community__sidebar .card{
+  padding: 10px;
+  margin-bottom: 4px;
+}
+
+.link {
+  margin-bottom: 4px;
+}
+
+.link .link__button {
+  background: var(--color1);
+  width: 100%;
+}
+/*  */
+
+
+@media screen and (max-width: 768px) {
+  .community__contents {
+    width: 100%;
+  }
+  .community__sidebar {
+    display: none;
+  }
+  .create__btn1 {
+    display: none !important;
+  }
+
+  .create__btn2 {
+    background:var(--color7) !important;
+    border: none !important;
+    display: inline-block !important;
+    position: fixed;
+    right: 1rem;
+    bottom: 3rem;
+    z-index: 10;
+  }
+
+  .btn__write {
+    display: none;
+  }
+}

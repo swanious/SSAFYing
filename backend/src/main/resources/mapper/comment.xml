@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafying.model.mapper.CommentMapper">
+      <select id="commentSelectAll" resultType="CommentDto">
+            select
+                  *
+            from
+                  Comment
+            ;
+      </select>
+      <insert id="commentInsert" parameterType="CommentDto">
+            insert into
+                  Comment(
+                        articleId,
+                        userId,
+                        content,
+                        parentId
+                  )
+            values
+                  (
+                        #{articleId},
+                        #{userId},
+                        #{content},
+                        <if test="parentId == 0">
+                              null
+                        </if>
+                        <if test="parentId != 0">
+                              #{parentId}
+                        </if>
+                  )
+            ;
+      </insert>
+      <select id="commentSelectRecent" resultType="CommentDto">
+            select
+                  *
+            from
+                  Comment
+            order by
+                  CommentId
+            desc
+            limit
+                  1
+            ;
+      </select>
+      <delete id="commentDelete" parameterType="CommentDto">
+            delete from
+                  Comment
+            where
+                  `commentId`=#{commentId}
+      </delete>
+      <update id="commentUpdate" parameterType="CommentDto">
+            update
+                  `Comment`
+            set
+                  articleId = #{articleId},
+                  userId = #{userId},
+                  content = #{content},
+                  updatedAt = current_timestamp()
+            where
+                  `commentId` = #{commentId}
+            ;
+      </update>
+      <select id="commentSelectByArticleId" resultType="CommentDto">
+            select
+                  *
+            from
+                  `Comment`
+            where
+                  `articleId` = #{articleId}
+            ;
+      </select>
+      <select id="commentSelectByCommentId" resultType="CommentDto">
+            select
+                  *
+            from
+                  `Comment`
+            where
+                  `commentId` = #{commentId}
+            ;
+      </select>
+      <select id="commentSelectByUserId" resultType="CommentDto">
+            select
+                  *
+            from
+                  Comment
+            where
+                  userId = #{userId}
+            order by
+                  commentId desc
+            ;
+      </select>
+      <select id="commentSelectLimit" resultType="CommentDto">
+            select
+                  *
+            from
+                  Comment
+            limit
+                  ${limit}
+            ;
+      </select>
+</mapper>

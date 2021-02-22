@@ -1,0 +1,302 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&family=Roboto&display=swap');
+
+/* color */
+#header,
+#footer {
+  box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+  background-color: var(--color1) !important;
+}
+
+#footer {
+  color: #ffffff;
+}
+
+#footer .col:nth-child(1){
+  height: 3px;
+  background: var(--color4);
+}
+
+#footer .col:nth-child(2){
+  height: 32px;
+  background: var(--color1);
+  right: 1rem;
+  text-align: right;
+  line-height: 32px;
+  font-weight: lighter;
+}
+
+#header__icon {
+  color: #ffffff;
+}
+
+#header__text {
+  color: #ffffff;
+}
+/*  */
+
+
+/* 헤더 로고 */
+.header__logo {
+  left: 16px;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 25px;
+  z-index: 10;
+}
+
+.header__logo > a {
+  font-family: 'Fugaz One', cursive;
+  font-size: 24px;
+}
+/*  */
+
+
+/* 중간 메뉴바 */
+.header__contents {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.header__contents > ul {
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header__contents > ul > li {
+  width: 100%;
+  height: 100%;
+}
+
+.header__contents > ul > li > a {
+  display: flex;
+  position: relative;
+  width: 100%; height: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.header__contents > ul > li > a::after {
+  content: "";
+  position: absolute;
+  left: 50%; bottom: 0;
+  width: 0; height: 3px;
+  background: #ffffff;
+}
+
+.header__contents > ul > li > a:hover:after {
+  width: 100%; transition: all 0.5s;
+  left: 0;
+}
+
+.header__contents > ul > li > a > svg {
+  font-size: 20px;
+}
+
+.header__contents span {
+  font-family: 'Noto Sans KR', sans-serif;
+  padding-left: 10px;
+}
+
+/*  */
+
+
+/* 우측 유저 컨텐츠 */
+.header__user {
+  right: 0;
+  width: 110px;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__header {
+  padding: 10px;
+}
+
+.card__profileimage {
+  padding: 10px 5px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__profilename {
+  padding: 10px 5px !important;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert__icon,
+.profile__icon {
+  font-size: 22px;
+}
+
+.user__hamburger {
+  display: none;
+}
+
+div.v-input__control {
+  display: none;
+}
+
+/*  */
+
+/* 풀다운 메뉴 */
+.pulldown {
+  display: block;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s;
+  z-index: -1;
+  transform: translate(0, -100%);
+  box-shadow: 1px 1px rgba(100, 100, 100, 0.3);
+}
+
+.pulldown.active {
+  display: block;
+  top: 56px;
+  background-color: rgb(240,242,245);
+  transform: translate(0, 0);
+  transition: all 0.5s;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.pulldown__header {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+  font-size: 18px;
+  font-family:'Noto Sans KR', sans-serif;
+  background-color: var(--color2);
+}
+
+.pulldown__header .alert {
+  margin: 0;
+  padding: 0 14px;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  color: white;
+}
+
+.pulldown__header .alert:hover {
+  color: red;
+  transition: all 0.1s;
+}
+
+.pulldown__header span {
+  color: #ffffff;
+}
+
+.pulldown__menu {
+  top: 0;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pulldown__menu a {
+  box-sizing: border-box;
+  width: 30%;
+  padding: 0.5rem;
+  display: flex;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #2e2e2e !important;
+}
+
+.pulldown__usermenu {
+  padding: 1rem;
+  text-align: right;
+}
+
+.pulldown__usermenu .btn:hover {
+  color: rgba(255, 0, 0, 0.8);
+}
+
+.pulldown__usermenu span {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+}
+/*  */
+
+
+@media screen and (max-width: 768px) {
+  .header__contents > ul > li > a > span {
+    display: none;
+  }
+
+  .header__contents > ul > li > a > svg {
+    margin: 0;
+    font-size: 18px;
+  }
+  .alert__icon,
+  .profile__icon {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .pulldown {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header__logo {
+    left: 0;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header__contents > ul > li {
+    display: none;
+  }
+  .user__notification {
+    display: none;
+  }
+  .user__profile {
+    display: none;
+  }
+
+  .user__hamburger {
+    margin-right: 4px;
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    text-align: right;
+    z-index: 10;
+  }
+
+  .hamburger__menu:hover {
+    transition: all 0.1s;
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,47 @@
+ul {
+  margin: 0 !important;
+}
+/* header */
+.admin__logo {
+  left: 16px;
+  width: 150px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.admin__logo > a {
+  color: white !important;
+}
+
+.admin__menus {
+  width: 100%;
+}
+
+.admin__menus ul {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.admin__menus ul li a span {
+  color: white;
+  font-size: 18px;
+  padding: 0 16px;
+}
+
+.admin__logout {
+  right: 16px;
+  width: 150px;
+  position: absolute;
+  text-align: right;
+}
+
+/* main */
+.container {
+  height: 100%;
+}

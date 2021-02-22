@@ -1,0 +1,24 @@
+div#modal-prevent-closing___BV_modal_content_ {
+  font-family: "Noto Sans", "Roboto", sans-serif;
+}
+
+h5#modal-prevent-closing___BV_modal_title_ {
+  font-weight: bold;
+}
+
+header#modal-prevent-closing___BV_modal_header_ {
+  background-color: var(--color7);
+  color: #ffffff;
+}
+.modal-btn {
+  text-align: right;
+}
+.modal-btn .btn-create{
+  background-color: var(--color7);
+  color: #ffffff;
+}
+.modal-btn .btn-close {
+  margin: 0 5px;
+  background-color: var(--color1);
+  color: #ffffff;
+}

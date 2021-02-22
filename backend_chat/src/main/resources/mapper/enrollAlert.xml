@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafying_chat.model.mapper.EnrollAlertMapper">
+  <insert id="enrollAlertInsert" parameterType="EnrollAlertDto">
+    insert into EnrollAlert(
+      userId,
+      nickname,
+      chatRoomId,
+      name,
+      hostId
+    )
+    values(
+      #{userId},
+      #{nickname},
+      #{chatRoomId},
+      #{name},
+      #{hostId}
+    );
+  </insert>
+
+  <select id="enrollAlertSelectOne" parameterType="String" resultType="EnrollAlertDto">
+    select
+      enrollAlertId,
+      createdAt,
+      isRead,
+      userId,
+      nickname,
+      chatRoomId,
+      name
+    from
+      EnrollAlert
+    where
+      hostId = #{hostId}
+    ;
+  </select>
+
+  <update id="enrollAlertUpdate" parameterType="int">
+    update EnrollAlert
+    set
+      isRead = 1
+    where
+      enrollAlertId = #{enrollAlertId}
+    ;
+  </update>
+
+  <delete id="enrollAlertDelete" parameterType="int">
+    delete from EnrollAlert
+    where
+      enrollAlertId = #{enrollAlertId}
+    ;
+  </delete>
+</mapper>
