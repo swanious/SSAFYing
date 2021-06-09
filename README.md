@@ -56,6 +56,7 @@
 
 - UX/UI 담당
 - 페이지 레이아웃 구축
+- vue-router(SPA 라우터 설정) / vuex(상태관리)
 - restful API를 위한 axios라이브러리 활용 서버와 통신
 - backend팀원과 협업, 소켓통신 활용 오픈 채팅 구현(web socket)
 
