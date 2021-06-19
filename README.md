@@ -186,7 +186,7 @@
 
 ![img](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4f09616c-4691-4f7e-9aea-54962dec1198/header-animation-2.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210609%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210609T043705Z&X-Amz-Expires=86400&X-Amz-Signature=cd6c79f061198b323bc75635930553ba1c2cb4d38340a60228c39bc374f0f828&X-Amz-SignedHeaders=host)
 
-![img](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f78e1594-6a8b-4e92-8953-d0bda67e4000/pulldown-menu.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210609%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210609T043705Z&X-Amz-Expires=86400&X-Amz-Signature=b7c4b3caa0d69290edeb1e51420634a2ea6fa24c8b18df5688b54bdda74182c8&X-Amz-SignedHeaders=host)
+![image](https://user-images.githubusercontent.com/52116767/122575686-f686e800-d08b-11eb-9a71-4eccfa917570.png)
 
 - 각각 `웹 화면`, `576px ≤ x ≤768px`, `576px 이하`
 - 576px이하 모바일 화면에서는 풀다운 메뉴를 애니메이션으로 구현했다.
