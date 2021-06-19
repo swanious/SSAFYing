@@ -408,9 +408,9 @@ test/
 
 npm-debug.log
 yarn-error.log
-
 deploy
 README.assets
+.vscode
 
 
 ### Windows ###
