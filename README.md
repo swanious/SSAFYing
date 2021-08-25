@@ -180,10 +180,6 @@
 
 #### 중간 메뉴 탭
 
-![img](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/87a805a8-2e9f-4296-b4e0-d3e9e7c1071d/header-animation-1.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210609%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210609T043705Z&X-Amz-Expires=86400&X-Amz-Signature=bea17ae2ae4491428d8c62a315535816ed03788e1e35b7f4292ba0373fecc323&X-Amz-SignedHeaders=host)
-
-![img](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4f09616c-4691-4f7e-9aea-54962dec1198/header-animation-2.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210609%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210609T043705Z&X-Amz-Expires=86400&X-Amz-Signature=cd6c79f061198b323bc75635930553ba1c2cb4d38340a60228c39bc374f0f828&X-Amz-SignedHeaders=host)
-
 ![image](https://user-images.githubusercontent.com/52116767/122575686-f686e800-d08b-11eb-9a71-4eccfa917570.png)
 
 - 각각 `웹 화면`, `576px ≤ x ≤768px`, `576px 이하`
